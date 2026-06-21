@@ -4,6 +4,73 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // --- 3D Logo Model Configuration & Click Redirection ---
+  const modelViewer = document.getElementById('logo-3d-model');
+  if (modelViewer) {
+    // 1. Configure reflective, shiny glass-like material properties on load
+    modelViewer.addEventListener('load', () => {
+      try {
+        const materials = modelViewer.model.materials;
+        for (const material of materials) {
+          // Adjust standard PBR metallic-roughness settings
+          try {
+            if (material.pbrMetallicRoughness) {
+              material.pbrMetallicRoughness.setRoughnessFactor(0.05);
+              material.pbrMetallicRoughness.setMetallicFactor(0.9);
+            }
+          } catch (e) { /* PBR not supported on this material */ }
+
+          // KHR_materials_transmission (glass effect)
+          try {
+            if (material.transmission) {
+              material.transmission.setTransmissionFactor(0.85);
+            }
+          } catch (e) { /* Transmission extension not available */ }
+
+          // KHR_materials_volume (thickness for refraction)
+          try {
+            if (material.volume) {
+              material.volume.setThicknessFactor(0.5);
+            }
+          } catch (e) { /* Volume extension not available */ }
+
+          // Clearcoat properties for secondary outer shine layer
+          try {
+            if (material.clearcoat) {
+              material.clearcoat.setClearcoatFactor(1.0);
+              material.clearcoat.setClearcoatRoughnessFactor(0.05);
+            }
+          } catch (e) { /* Clearcoat extension not available */ }
+        }
+      } catch (error) {
+        console.warn('Could not apply shiny glass-like PBR materials:', error);
+      }
+    });
+
+    // 2. Distinguish click vs drag for redirection to the works website
+    let startX = 0;
+    let startY = 0;
+    let startTime = 0;
+
+    modelViewer.addEventListener('pointerdown', (e) => {
+      startX = e.clientX;
+      startY = e.clientY;
+      startTime = Date.now();
+    });
+
+    modelViewer.addEventListener('pointerup', (e) => {
+      const dx = e.clientX - startX;
+      const dy = e.clientY - startY;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      const elapsedTime = Date.now() - startTime;
+
+      // If the cursor barely moved and was released quickly, count as a click
+      if (distance < 8 && elapsedTime < 250) {
+        window.open('https://hayotzer-project-resume.pages.dev', '_blank');
+      }
+    });
+  }
+
   // --- Navigation & Scroll Effects ---
   const navbar = document.getElementById('navbar');
   const mobileToggle = document.getElementById('mobile-toggle');

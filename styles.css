@@ -480,6 +480,71 @@ ul, ol {
   animation: float 6s ease-in-out infinite;
 }
 
+/* Registration Grid — 2-column layout with form + 3D model */
+.registration-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Registration 3D Model Wrapper — fully transparent */
+.registration-model-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.registration-model-wrapper model-viewer {
+  width: 100%;
+  height: 480px;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  --poster-color: transparent;
+}
+
+/* Style the model-viewer element */
+#logo-3d-model {
+  width: 100%;
+  height: 480px;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  --poster-color: transparent;
+}
+
+/* Model Interactive Hint */
+.model-hint {
+  font-size: var(--font-size-xs);
+  color: var(--color-primary);
+  font-weight: 600;
+  text-align: center;
+  margin-top: var(--space-sm);
+  background: rgba(255, 255, 255, 0.85);
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+  pointer-events: none;
+  box-shadow: var(--shadow-sm);
+  animation: pulse-hint 2s infinite ease-in-out;
+  z-index: 10;
+}
+
+@keyframes pulse-hint {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.95;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
 /* Floating decorative elements around hero */
 .floating-element {
   position: absolute;
@@ -708,7 +773,6 @@ ul, ol {
 
 .form-wrapper {
   max-width: 600px;
-  margin: 0 auto;
   background: rgba(255, 255, 255, 0.65);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
@@ -1100,6 +1164,24 @@ ul, ol {
     max-width: 360px;
   }
 
+  .registration-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .registration-model-wrapper {
+    order: -1;
+  }
+
+  .registration-model-wrapper model-viewer,
+  #logo-3d-model {
+    height: 300px;
+  }
+
+  .model-hint {
+    font-size: 0.7rem;
+    padding: 3px 10px;
+  }
+
   .floating-element {
     display: none;
   }
@@ -1141,6 +1223,15 @@ ul, ol {
 
   .hero-image-wrapper {
     max-width: 480px;
+  }
+
+  .registration-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .registration-model-wrapper model-viewer,
+  #logo-3d-model {
+    height: 400px;
   }
 
   .hero-meta {
