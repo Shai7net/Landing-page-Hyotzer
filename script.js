@@ -306,6 +306,142 @@ document.addEventListener('DOMContentLoaded', () => {
         techMotion: "Luma AI, Runway Gen-2 וכלים מתקדמים נוספים",
         techOther: "עריכה תלת-מימדית וטכנולוגיית מציאות מדומה (VR) ליצירת עומק ופרספקטיבה"
       }
+    },
+    {
+      id: "dn7hREv-MVs",
+      title: "Clip AI",
+      channel: "shaitt",
+      channelName: "@shaitt1137",
+      category: "shaitt",
+      badge: "קליפ AI",
+      desc: "קליפ וידאו שנוצר בשלמותו בעזרת כלי AI — מהרעיון ועד לתוצר הסופי.",
+      glowColors: "rgba(236, 72, 153, 0.45), rgba(124, 58, 237, 0.35)",
+      story: {
+        about: "יצירה שלמה שנוצרה בעזרת בינה מלאכותית, משלבת אנימציה, עיצוב ועריכה ב-AI.",
+        extra: "כל פריים ויזואלי נוצר עם Stable Diffusion ועבר עיבוד ותנועה בכלי תנועה מתקדמים.",
+        techImages: "Stable Diffusion (A1111)",
+        techMotion: "Runway Gen-2, Luma AI",
+        techOther: "עריכה ב-DaVinci Resolve"
+      }
+    },
+    {
+      id: "K1NqrB9rbc4",
+      title: "סרטון גדילה AI — בת מצווה",
+      channel: "shaitt",
+      channelName: "@shaitt1137",
+      category: "shaitt",
+      badge: "Shorts ✦ AI",
+      desc: "סרטון גדילה ייחודי לבת מצווה שנוצר בעזרת בינה מלאכותית.",
+      glowColors: "rgba(245, 158, 11, 0.45), rgba(236, 72, 153, 0.35)",
+      story: {
+        about: "שילוב רגשי של תמונות ילדות עם אנימציה ותנועה שנוצרו ב-AI ליצירת סרטון גדילה מרגש.",
+        extra: "הפרויקט מדגים כיצד AI יכול ליצור תוכן אישי ומרגש לאירועים מיוחדים.",
+        techImages: "Stable Diffusion, img2img",
+        techMotion: "Runway Gen-2",
+        techOther: "עריכה וסנכרון מוזיקה ידנית"
+      }
+    },
+    {
+      id: "7NoQThZ3UuI",
+      title: "Laytime Apocalypse — AI Film",
+      channel: "shaitt",
+      channelName: "@shaitt1137",
+      category: "shaitt",
+      badge: "סרט AI ✦ קצר",
+      desc: "סרט קצר בסגנון אפוקליפטי שנוצר לחלוטין בעזרת AI — תמונות, אנימציה ועריכה.",
+      glowColors: "rgba(239, 68, 68, 0.45), rgba(124, 58, 237, 0.35)",
+      story: {
+        about: "סרטון קצר המציג עולם פוסט-אפוקליפטי שנוצר בשלמותו בכלי AI. שימוש בפרומפטים מורכבים ליצירת אווירה קודרת ומלאת מתח.",
+        extra: "הסרט מתמקד בעיצוב סביבה ובניית עולם (World-Building) בעזרת AI, תוך שמירה על עקביות ויזואלית.",
+        techImages: "Stable Diffusion XL עם מודלים מותאמים",
+        techMotion: "Luma AI Dream Machine",
+        techOther: "עיצוב סאונד ואפקטים אמביינטיים"
+      }
+    },
+    {
+      id: "r3VTSucVRgY",
+      title: "רמי פורטיס — תחנה סופית",
+      channel: "shaitt",
+      channelName: "@shaitt1137",
+      category: "shaitt",
+      badge: "קליפ מוזיקה ✦ AI",
+      desc: "קליפ AI לשיר הקלאסי של רמי פורטיס \"תחנה סופית\" — שילוב נוסטלגי של מוזיקה ואמנות דיגיטלית.",
+      glowColors: "rgba(16, 185, 129, 0.45), rgba(99, 102, 241, 0.35)",
+      story: {
+        about: "מחווה ויזואלית לשיר הקלאסי של רמי פורטיס. כל הוויזואלים נוצרו ב-AI תוך שמירה על אווירה נוסטלגית ורגשית התואמת את המוזיקה.",
+        extra: "הפרויקט מדגים שימוש ב-AI ליצירת פרשנות ויזואלית חדשה לשירים קלאסיים.",
+        techImages: "Stable Diffusion עם סגנון ציורי",
+        techMotion: "AnimateDiff, Runway",
+        techOther: "סנכרון מדויק של ויזואלים לביט המוזיקלי"
+      }
+    },
+    {
+      id: "_PL8aqONgYk",
+      title: "November — AI Film",
+      channel: "shaitt",
+      channelName: "@shaitt1137",
+      category: "shaitt",
+      badge: "סרט AI ✦ ספרותי",
+      desc: "סרט AI ספרותי בהשראת חודש נובמבר — אווירה מלנכולית ועיצוב ויזואלי עשיר.",
+      glowColors: "rgba(99, 102, 241, 0.45), rgba(124, 58, 237, 0.35)",
+      story: {
+        about: "סרט קצר המתאר את האווירה המיוחדת של חודש נובמבר — גשם, אבדן ואור. הויזואלים נוצרו ב-AI עם דגש על אסתטיקה קולנועית.",
+        extra: "שימוש בפרומפטים פואטיים ליצירת תמונות בעלות עומק רגשי, עם ליטוש אחרון ב-color grading.",
+        techImages: "Stable Diffusion XL, Cinematography LoRA",
+        techMotion: "Luma Dream Machine",
+        techOther: "Color grading קולנועי ב-DaVinci Resolve"
+      }
+    },
+    {
+      id: "YjyU59Xr9qU",
+      title: "יציבות — Shai Tiri",
+      channel: "shaitt",
+      channelName: "@shaitt1137",
+      category: "shaitt",
+      badge: "מוזיקה מקורית ✦ AI",
+      desc: "שיר ומוזיקה מקוריים בשם \"יציבות\" — הלחן, ההפקה והוויזואלים נוצרו בשיתוף AI.",
+      glowColors: "rgba(6, 182, 212, 0.45), rgba(124, 58, 237, 0.35)",
+      story: {
+        about: "יצירה מוזיקלית מקורית משלבת כתיבת מילים אישית עם הפקה מוזיקלית בכלי AI. הקליפ נוצר ב-Stable Diffusion.",
+        extra: "הפרויקט מדגים כיצד יוצר בודד יכול לנהל פרויקט מוזיקלי שלם — מהכתיבה ועד להפצה — בעזרת AI.",
+        techImages: "Stable Diffusion, Midjourney",
+        techMotion: "Runway Gen-2",
+        techOther: "Suno AI להפקה מוזיקלית"
+      }
+    },
+    {
+      id: "gWo-eveJRMY",
+      title: "Animal Chill — Stable Diffusion XL + Deforum",
+      channel: "shaitt",
+      channelName: "@shaitt1137",
+      category: "shaitt",
+      badge: "אנימציה ✦ Deforum",
+      desc: "אנימציית Deforum מרגיעה עם בעלי חיים — ניסוי ויזואלי ב-Stable Diffusion XL ו-Deforum.",
+      glowColors: "rgba(52, 211, 153, 0.45), rgba(16, 185, 129, 0.35)",
+      story: {
+        about: "ניסוי טכני ב-Deforum — כלי האנימציה של Stable Diffusion. יצירת זרימה ויזואלית חלקה בין פריימים עם בעלי חיים ב-Stable Diffusion XL.",
+        extra: "Deforum מאפשר יצירת אנימציות \"חלומיות\" שמשנות את עצמן בהדרגה. המדריך המלא לשימוש מצורף בתגובות.",
+        techImages: "Stable Diffusion XL",
+        techMotion: "Deforum Extension (A1111)",
+        techOther: "כוונון פרמטרים של keyframes ותנועה"
+      }
+    },
+    {
+      id: "r8hgc_9hFag",
+      title: "כותב מילים בגשם",
+      channel: "shaitt",
+      channelName: "@shaitt1137",
+      category: "shaitt",
+      badge: "קליפ שיר ✦ AI",
+      desc: "קליפ ויזואלי מרגש לשיר \"כותב מילים בגשם\" — אמנות AI בשירות רגש ומוזיקה.",
+      glowColors: "rgba(59, 130, 246, 0.45), rgba(99, 102, 241, 0.35)",
+      story: {
+        about: "קליפ ויזואלי שנוצר לשיר רגשי על כתיבה, יצירה וגשם. כל תמונה נוצרה בעזרת פרומפטים המשלבים שירה ואמנות.",
+        extra: "הפרויקט מדגים כיצד ניתן לתרגם מילים ורגשות לוויזואלים מרהיבים בעזרת הנחיות מדויקות ל-AI.",
+        techImages: "Stable Diffusion, SDXL",
+        techMotion: "Runway Gen-2",
+        techOther: "סנכרון ויזואלי-אודיו ועריכה סופית"
+      }
     }
   ];
 
