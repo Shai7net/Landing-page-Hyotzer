@@ -29,6 +29,7 @@
 
       <div class="navbar-links" id="navbar-links">
         <a href="#features">מה נלמד</a>
+        <a href="#creations">הסרטונים שלי</a>
         <a href="#details">פרטי הסדנה</a>
         <a href="#registration" class="navbar-cta">הרשמה</a>
       </div>
@@ -71,9 +72,9 @@
             אני רוצה להירשם לסדנת הזום
             <span>←</span>
           </a>
-          <a href="#features" class="btn-secondary">
+          <a href="#creations" class="btn-secondary">
             <span>▶</span>
-            מה נלמד בסדנה?
+            לצפייה בסרט הדגל
           </a>
         </div>
 
@@ -174,6 +175,98 @@
           <h3>יצירת סרטון וידיאו שלם ביחד</h3>
           <p>פרויקט גמר מעשי: ניצור סרטון מלא ומרשים מההתחלה ועד התוצר הסופי.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CREATIONS GALLERY ==================== -->
+  <section class="creations section" id="creations">
+    <div class="container">
+      <h2 class="section-title reveal">גלריית היצירות של היוצר</h2>
+      <p class="section-subtitle reveal">הצצה לעולם הסרטים, האנימציות והתוכן הדיגיטלי שנוצרו בעזרת בינה מלאכותית וכלים מתקדמים</p>
+
+      <!-- Main Cinema Spotlight Player -->
+      <div class="cinema-spotlight reveal" id="cinema-spotlight">
+        <div class="ambient-glow-container">
+          <div class="ambient-glow" id="ambient-glow"></div>
+        </div>
+        
+        <div class="cinema-theater">
+          <div class="video-player-wrapper">
+            <iframe 
+              id="main-video-player"
+              src="https://www.youtube.com/embed/sedd2J_a4Wg?enablejsapi=1&rel=0" 
+              title="סרט הדגל - קלסטרופוביה במרחב פתוח" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          
+          <div class="cinema-controls">
+            <button class="btn-cinema-mode" id="btn-cinema-mode" title="מצב קולנוע">
+              <span class="icon">🎬</span> מצב קולנוע
+            </button>
+          </div>
+        </div>
+
+        <div class="cinema-details">
+          <div class="video-meta-top">
+            <span class="video-badge" id="video-badge">סדרת הדגל ✦ פרק 1</span>
+            <span class="video-channel-tag tag-shaitt" id="video-channel-tag">@shaitt1137</span>
+          </div>
+          <h3 class="cinema-title" id="cinema-title">"קלסטרופוביה במרחב פתוח": פרק 1 - "מבעד לצידו האחר של הראש"</h3>
+          
+          <div class="story-box">
+            <div class="story-tab-buttons">
+              <button class="story-tab-btn active" data-tab="about">הסיפור מאחורי היצירה</button>
+              <button class="story-tab-btn" data-tab="tech">טכנולוגיה וכלים</button>
+            </div>
+            <div class="story-tab-content active" id="tab-about">
+              <p id="video-story-about">
+                לפני כ-15 שנה, במהלך השירות הצבאי שלי, מצאתי את עצמי בבית החולים עובר ניתוח באוזן (עור התוף) תחת הרדמה מלאה. באותה תקופה טלפונים חכמים לא היו נפוצים, ולכן השתמשתי במחברת ועט שליוו אותי תמיד כדי לכתוב סיפורים קצרים. לפני הניתוח כתבתי חצי מהסיפור, ואחרי הניתוח ובמהלך ההתאוששות שלי בבית החולים, המשכתי לפתח אותו. הסיפור הפך לחלק מהספר שלי "קלסטרופוביה במרחב פתוח".
+              </p>
+              <p id="video-story-extra" style="margin-top: 10px;">
+                לאחר כ-15 שנה ו-4 חודשים של עבודה אינטנסיבית על הסרט, לצד התפתחות הבינה המלאכותית, הצלחתי להפוך את הסיפור הקצר לסרט קולנועי מלא של כ-15 דקות! כל התוכן והתסריט נכתבו על ידי, ללא שימוש בבינה מלאכותית לכתיבה.
+              </p>
+            </div>
+            <div class="story-tab-content" id="tab-tech">
+              <div class="tech-grid">
+                <div class="tech-item">
+                  <strong>יצירת תמונות (90%):</strong>
+                  <span id="video-tech-images">Stable Diffusion (A1111) עם מודל lunarityxlturbo (הנבחר בשל מהירותו ואיכותו הגבוהה לסרטים ארוכים)</span>
+                </div>
+                <div class="tech-item">
+                  <strong>מודלי תנועה ואנימציה:</strong>
+                  <span id="video-tech-motion">Luma AI, Runway Gen-2 וכלים מתקדמים נוספים</span>
+                </div>
+                <div class="tech-item">
+                  <strong>טכנולוגיות נוספות:</strong>
+                  <span id="video-tech-other">עריכה תלת-מימדית וטכנולוגיית מציאות מדומה (VR) ליצירת עומק ופרספקטיבה</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter Categories -->
+      <div class="gallery-filters reveal">
+        <button class="filter-btn active" data-filter="all">הכל</button>
+        <button class="filter-btn" data-filter="flagship">סדרת הדגל</button>
+        <button class="filter-btn" data-filter="shaitt">ערוץ 1 (@shaitt1137)</button>
+        <button class="filter-btn" data-filter="the88creator">ערוץ 2 (@the88creator)</button>
+      </div>
+
+      <!-- Videos Grid -->
+      <div class="videos-grid reveal" id="videos-grid">
+        <!-- Will be populated dynamically via JavaScript -->
+      </div>
+      
+      <!-- Call to Action below gallery -->
+      <div class="gallery-cta reveal">
+        <p>רוצים ללמוד איך ליצור סרטונים ותמונות מרהיבות כאלה בעצמכם?</p>
+        <a href="#registration" class="btn-primary">אני רוצה להירשם לסדנה בזום!</a>
       </div>
     </div>
   </section>

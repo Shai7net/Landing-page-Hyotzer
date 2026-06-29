@@ -288,5 +288,276 @@ document.addEventListener('DOMContentLoaded', () => {
     submitBtn.classList.remove('loading');
   });
 
+  // --- Video Gallery & Cinema Mode ---
+  const VIDEOS_DATA = [
+    {
+      id: "sedd2J_a4Wg",
+      title: "\"קלסטרופוביה במרחב פתוח\" - פרק 1: מבעד לצידו האחר של הראש",
+      channel: "shaitt",
+      channelName: "@shaitt1137",
+      category: "flagship",
+      badge: "סדרת הדגל ✦ פרק 1",
+      desc: "סרט AI קולנועי באורך 15 דקות המבוסס על סיפור מקורי מתוך הספר \"קלסטרופוביה במרחב פתוח\". נוצר בעזרת Stable Diffusion וכלים מתקדמים.",
+      glowColors: "rgba(124, 58, 237, 0.45), rgba(99, 102, 241, 0.35)",
+      story: {
+        about: "לפני כ-15 שנה, במהלך השירות הצבאי שלי, מצאתי את עצמי בבית החולים עובר ניתוח באוזן (עור התוף) תחת הרדמה מלאה. באותה תקופה טלפונים חכמים לא היו נפוצים, ולכן השתמשתי במחברת ועט שליוו אותי תמיד כדי לכתוב סיפורים קצרים. לפני הניתוח כתבתי חצי מהסיפור, ואחרי הניתוח ובמהלך ההתאוששות שלי בבית החולים, המשכתי לפתח אותו. הסיפור הפך לחלק מהספר שלי \"קלסטרופוביה במרחב פתוח\".",
+        extra: "לאחר כ-15 שנה ו-4 חודשים של עבודה אינטנסיבית על הסרט, לצד התפתחות הבינה המלאכותית, הצלחתי להפוך את הסיפור הקצר לסרט קולנועי מלא של כ-15 דקות! כל התוכן והתסריט נכתבו על ידי, ללא שימוש בבינה מלאכותית לכתיבה.",
+        techImages: "Stable Diffusion (A1111) עם מודל lunarityxlturbo (הנבחר בשל מהירותו ואיכותו הגבוהה לסרטים ארוכים)",
+        techMotion: "Luma AI, Runway Gen-2 וכלים מתקדמים נוספים",
+        techOther: "עריכה תלת-מימדית וטכנולוגיית מציאות מדומה (VR) ליצירת עומק ופרספקטיבה"
+      }
+    },
+    {
+      id: "y83526-song",
+      title: "כתבתי לך שיר - יצירת מוזיקה ואנימציה ב-AI",
+      channel: "shaitt",
+      channelName: "@shaitt1137",
+      category: "shaitt",
+      badge: "מוזיקה מקורית ✦ AI",
+      desc: "קליפ ושיר מקוריים שנוצרו בעזרת בינה מלאכותית. הלחן, ההפקה המוזיקלית, האנימציה ועריכת הקליפ הופקו כולם בכלי AI מתקדמים.",
+      glowColors: "rgba(236, 72, 153, 0.45), rgba(124, 58, 237, 0.35)",
+      story: {
+        about: "שילוב ייחודי של יצירת מוזיקה (Suno/Udio) עם אנימציית וידאו שנוצרה ב-Stable Diffusion. הפרויקט מדגים כיצד בינה מלאכותית מאפשרת ליוצר בודד להפיק קליפ מוזיקלי שלם ברמה מקצועית מאפס.",
+        extra: "כל התפקידים - מהכותב, המלחין, המעבד ועד לאנימטור והעורך - נעשו על ידי שימוש מושכל בפרומפטים ובכלים ג'נרטיביים מתקדמים.",
+        techImages: "Stable Diffusion, Midjourney v6",
+        techMotion: "Suno AI (למוזיקה), Runway Gen-2 (לוידאו)",
+        techOther: "Adobe Premiere Pro לעריכה סופית ותיקוני צבע"
+      }
+    },
+    {
+      id: "y83526-bts",
+      title: "תהליך היצירה של סרטי AI: מאחורי הקלעים",
+      channel: "shaitt",
+      channelName: "@shaitt1137",
+      category: "shaitt",
+      badge: "מאחורי הקלעים ✦ מדריך",
+      desc: "סקירה מקיפה של תהליך העבודה (Workflow) של סרט ה-AI שלי. איך משלבים מודלים של תמונה ותנועה כדי ליצור עקביות בין סצנות.",
+      glowColors: "rgba(16, 185, 129, 0.45), rgba(99, 102, 241, 0.35)",
+      story: {
+        about: "סרטון הסבר המפרט את הבעיות המרכזיות בעבודה על סרטים ארוכים ב-AI, כמו שמירה על עקביות של דמויות (Character Consistency) ורקעים בין שוטים שונים.",
+        extra: "מתאים במיוחד למי שרוצה להבין את הצד הטכני והמעשי של הפקת סרטים ואיך הכלים השונים מתחברים לפייפליין עבודה אחד.",
+        techImages: "Stable Diffusion WebUI (Automatic1111) עם בקרות ControlNet",
+        techMotion: "AnimateDiff, Luma Dream Machine",
+        techOther: "טכניקות Inpainting ו-Outpainting מתקדמות לשמירה על עקביות"
+      }
+    },
+    {
+      id: "y83526-vlog",
+      title: "ולוג יוצרים: איך בניתי את ערוץ היוטיוב השני שלי ב-88 ימים",
+      channel: "the88creator",
+      channelName: "@the88creator",
+      category: "the88creator",
+      badge: "ולוג יוצרים ✦ ערוץ 2",
+      desc: "סרטון הפתיחה של ערוץ @the88creator. האסטרטגיה מאחורי בניית קהילה, תדירות העלאת סרטונים ואתגר ה-88 סרטונים ב-2025.",
+      glowColors: "rgba(245, 158, 11, 0.45), rgba(239, 68, 68, 0.35)",
+      story: {
+        about: "כיצד ליצור תוכן עקבי ואיכותי ביוטיוב בלי להישחק. בסרטון זה אני משתף את המטרות של ערוץ the88creator ואת הכלים שעוזרים לי לנהל שני ערוצים במקביל.",
+        extra: "טיפים מעשיים ליוצרי תוכן מתחילים שרוצים לפרוץ ביוטיוב, להתגבר על מחסומי כתיבה ולערוך סרטונים במהירות.",
+        techImages: "מצלמות mirrorless וציוד סאונד מקצועי",
+        techMotion: "CapCut Pro לעריכה מהירה וממוקדת",
+        techOther: "כלי AI לאופטימיזציה של כותרות, תיאורים ותמונות ממוזערות (Thumbnails)"
+      }
+    },
+    {
+      id: "y83526-logo",
+      title: "איך להשתמש ב-Stable Diffusion ליצירת לוגו תלת-מימד",
+      channel: "the88creator",
+      channelName: "@the88creator",
+      category: "the88creator",
+      badge: "מדריך ✦ Stable Diffusion",
+      desc: "מדריך מעשי צעד-אחר-צעד ליצירת לוגו תלת-מימד מבריק (כמו לוגו היוצר הקיים בעמוד הנחיתה) בעזרת בינה מלאכותית.",
+      glowColors: "rgba(6, 182, 212, 0.45), rgba(99, 102, 241, 0.35)",
+      story: {
+        about: "במדריך זה נלמד איך לקחת סקיצה דו-מימדית פשוטה ולהפוך אותה לטקסטורה ומודל תלת-מימדי עשיר עם החזר אור באמצעות כללי פרומפטים מורכבים ב-SD.",
+        extra: "נציג שימוש בטכנולוגיות ControlNet Depth ו-Normal Maps ליצירת עומק וגימור זכוכית או מתכת מבריקה.",
+        techImages: "Stable Diffusion WebUI, ControlNet, Model-Viewer Integration",
+        techMotion: "Blender לעיבוד ה-GLB הסופי",
+        techOther: "CSS/JS להטמעת המודל בצורה רספונסיבית באתר האינטרנט"
+      }
+    }
+  ];
+
+  const mainVideoPlayer = document.getElementById('main-video-player');
+  const ambientGlow = document.getElementById('ambient-glow');
+  const cinemaTitle = document.getElementById('cinema-title');
+  const videoBadge = document.getElementById('video-badge');
+  const videoChannelTag = document.getElementById('video-channel-tag');
+  
+  // Tab elements
+  const storyTabButtons = document.querySelectorAll('.story-tab-btn');
+  const storyTabContents = document.querySelectorAll('.story-tab-content');
+  
+  // Story details elements
+  const videoStoryAbout = document.getElementById('video-story-about');
+  const videoStoryExtra = document.getElementById('video-story-extra');
+  const videoTechImages = document.getElementById('video-tech-images');
+  const videoTechMotion = document.getElementById('video-tech-motion');
+  const videoTechOther = document.getElementById('video-tech-other');
+  
+  // Filters and Grid
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const videosGrid = document.getElementById('videos-grid');
+  
+  // Cinema Mode
+  const btnCinemaMode = document.getElementById('btn-cinema-mode');
+
+  // --- 1. Story Tab Switching ---
+  storyTabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tabName = btn.getAttribute('data-tab');
+      
+      storyTabButtons.forEach(b => b.classList.remove('active'));
+      storyTabContents.forEach(c => c.classList.remove('active'));
+      
+      btn.classList.add('active');
+      const targetContent = document.getElementById(`tab-${tabName}`);
+      if (targetContent) targetContent.classList.add('active');
+    });
+  });
+
+  // --- 2. Load Video to Spotlight ---
+  const loadVideo = (video) => {
+    if (!mainVideoPlayer) return;
+    
+    // Set iframe source (with enablejsapi=1 for controller control)
+    let embedUrl = `https://www.youtube.com/embed/${video.id}?enablejsapi=1&rel=0`;
+    // If it's a mock id (starts with y83526), use the flagship video for preview
+    if (video.id.startsWith('y83526')) {
+      embedUrl = `https://www.youtube.com/embed/sedd2J_a4Wg?enablejsapi=1&rel=0`;
+    }
+    mainVideoPlayer.src = embedUrl;
+    
+    // Update basic meta
+    if (cinemaTitle) cinemaTitle.textContent = video.title;
+    if (videoBadge) videoBadge.textContent = video.badge;
+    
+    // Update Channel Tag
+    if (videoChannelTag) {
+      videoChannelTag.textContent = video.channelName;
+      videoChannelTag.className = `video-channel-tag tag-${video.channel}`;
+    }
+    
+    // Update Tab Content
+    if (videoStoryAbout) videoStoryAbout.textContent = video.story.about;
+    if (videoStoryExtra) videoStoryExtra.textContent = video.story.extra;
+    if (videoTechImages) videoTechImages.textContent = video.story.techImages;
+    if (videoTechMotion) videoTechMotion.textContent = video.story.techMotion;
+    if (videoTechOther) videoTechOther.textContent = video.story.techOther;
+    
+    // Update Ambient Glow Colors
+    if (ambientGlow && video.glowColors) {
+      ambientGlow.style.background = `radial-gradient(circle, ${video.glowColors}, transparent 70%)`;
+    }
+  };
+
+  // --- 3. Render Video Gallery Grid ---
+  const renderGrid = (filter = 'all') => {
+    if (!videosGrid) return;
+    
+    videosGrid.innerHTML = '';
+    
+    // Filter videos
+    const filteredVideos = VIDEOS_DATA.filter(video => {
+      if (filter === 'all') return true;
+      if (filter === 'flagship') return video.category === 'flagship';
+      if (filter === 'shaitt') return video.channel === 'shaitt';
+      if (filter === 'the88creator') return video.channel === 'the88creator';
+      return true;
+    });
+    
+    // Render cards
+    filteredVideos.forEach(video => {
+      const card = document.createElement('div');
+      card.className = 'video-card reveal visible';
+      
+      // Pull MQ YouTube thumbnails
+      let thumbUrl = `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`;
+      if (video.id.startsWith('y83526')) {
+        thumbUrl = `https://img.youtube.com/vi/sedd2J_a4Wg/mqdefault.jpg`;
+      }
+      
+      card.innerHTML = `
+        <div class="video-thumbnail-wrapper">
+          <img src="${thumbUrl}" alt="${video.title}" loading="lazy" />
+          <div class="video-play-overlay">
+            <div class="video-play-button-icon">▶</div>
+          </div>
+          <span class="video-card-badge">${video.badge.split(' ✦ ')[0]}</span>
+        </div>
+        <div class="video-card-content">
+          <div class="video-card-channel tag-${video.channel}">${video.channelName}</div>
+          <h4 class="video-card-title">${video.title}</h4>
+          <p class="video-card-desc">${video.desc}</p>
+        </div>
+      `;
+      
+      // Click event to load video
+      card.addEventListener('click', () => {
+        loadVideo(video);
+        
+        // Scroll to cinema spotlight smoothly
+        const spotlightElement = document.getElementById('cinema-spotlight');
+        if (spotlightElement) {
+          spotlightElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+      
+      videosGrid.appendChild(card);
+    });
+  };
+
+  // --- 4. Filtering Logic ---
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      
+      const filter = btn.getAttribute('data-filter');
+      renderGrid(filter);
+    });
+  });
+
+  // --- 5. Cinema Mode Implementation ---
+  if (btnCinemaMode) {
+    btnCinemaMode.addEventListener('click', (e) => {
+      e.stopPropagation();
+      document.body.classList.toggle('cinema-darkened');
+      btnCinemaMode.classList.toggle('active');
+      
+      if (document.body.classList.contains('cinema-darkened')) {
+        btnCinemaMode.innerHTML = '<span class="icon">✨</span> צא ממצב קולנוע';
+      } else {
+        btnCinemaMode.innerHTML = '<span class="icon">🎬</span> מצב קולנוע';
+      }
+    });
+
+    // Close cinema mode when clicking anywhere outside player
+    document.addEventListener('click', (e) => {
+      if (document.body.classList.contains('cinema-darkened')) {
+        const spotlight = document.getElementById('cinema-spotlight');
+        if (spotlight && !spotlight.contains(e.target)) {
+          document.body.classList.remove('cinema-darkened');
+          btnCinemaMode.classList.remove('active');
+          btnCinemaMode.innerHTML = '<span class="icon">🎬</span> מצב קולנוע';
+        }
+      }
+    });
+
+    // Close cinema mode with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && document.body.classList.contains('cinema-darkened')) {
+        document.body.classList.remove('cinema-darkened');
+        btnCinemaMode.classList.remove('active');
+        btnCinemaMode.innerHTML = '<span class="icon">🎬</span> מצב קולנוע';
+      }
+    });
+  }
+
+  // --- 6. Initial Render ---
+  renderGrid();
+  if (ambientGlow) {
+    ambientGlow.style.background = 'radial-gradient(circle, rgba(124, 58, 237, 0.45), rgba(99, 102, 241, 0.35) 40%, transparent 70%)';
+  }
+
 });
 
