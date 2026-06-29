@@ -306,74 +306,6 @@ document.addEventListener('DOMContentLoaded', () => {
         techMotion: "Luma AI, Runway Gen-2 וכלים מתקדמים נוספים",
         techOther: "עריכה תלת-מימדית וטכנולוגיית מציאות מדומה (VR) ליצירת עומק ופרספקטיבה"
       }
-    },
-    {
-      id: "y83526-song",
-      title: "כתבתי לך שיר - יצירת מוזיקה ואנימציה ב-AI",
-      channel: "shaitt",
-      channelName: "@shaitt1137",
-      category: "shaitt",
-      badge: "מוזיקה מקורית ✦ AI",
-      desc: "קליפ ושיר מקוריים שנוצרו בעזרת בינה מלאכותית. הלחן, ההפקה המוזיקלית, האנימציה ועריכת הקליפ הופקו כולם בכלי AI מתקדמים.",
-      glowColors: "rgba(236, 72, 153, 0.45), rgba(124, 58, 237, 0.35)",
-      story: {
-        about: "שילוב ייחודי של יצירת מוזיקה (Suno/Udio) עם אנימציית וידאו שנוצרה ב-Stable Diffusion. הפרויקט מדגים כיצד בינה מלאכותית מאפשרת ליוצר בודד להפיק קליפ מוזיקלי שלם ברמה מקצועית מאפס.",
-        extra: "כל התפקידים - מהכותב, המלחין, המעבד ועד לאנימטור והעורך - נעשו על ידי שימוש מושכל בפרומפטים ובכלים ג'נרטיביים מתקדמים.",
-        techImages: "Stable Diffusion, Midjourney v6",
-        techMotion: "Suno AI (למוזיקה), Runway Gen-2 (לוידאו)",
-        techOther: "Adobe Premiere Pro לעריכה סופית ותיקוני צבע"
-      }
-    },
-    {
-      id: "y83526-bts",
-      title: "תהליך היצירה של סרטי AI: מאחורי הקלעים",
-      channel: "shaitt",
-      channelName: "@shaitt1137",
-      category: "shaitt",
-      badge: "מאחורי הקלעים ✦ מדריך",
-      desc: "סקירה מקיפה של תהליך העבודה (Workflow) של סרט ה-AI שלי. איך משלבים מודלים של תמונה ותנועה כדי ליצור עקביות בין סצנות.",
-      glowColors: "rgba(16, 185, 129, 0.45), rgba(99, 102, 241, 0.35)",
-      story: {
-        about: "סרטון הסבר המפרט את הבעיות המרכזיות בעבודה על סרטים ארוכים ב-AI, כמו שמירה על עקביות של דמויות (Character Consistency) ורקעים בין שוטים שונים.",
-        extra: "מתאים במיוחד למי שרוצה להבין את הצד הטכני והמעשי של הפקת סרטים ואיך הכלים השונים מתחברים לפייפליין עבודה אחד.",
-        techImages: "Stable Diffusion WebUI (Automatic1111) עם בקרות ControlNet",
-        techMotion: "AnimateDiff, Luma Dream Machine",
-        techOther: "טכניקות Inpainting ו-Outpainting מתקדמות לשמירה על עקביות"
-      }
-    },
-    {
-      id: "y83526-vlog",
-      title: "ולוג יוצרים: איך בניתי את ערוץ היוטיוב השני שלי ב-88 ימים",
-      channel: "the88creator",
-      channelName: "@the88creator",
-      category: "the88creator",
-      badge: "ולוג יוצרים ✦ ערוץ 2",
-      desc: "סרטון הפתיחה של ערוץ @the88creator. האסטרטגיה מאחורי בניית קהילה, תדירות העלאת סרטונים ואתגר ה-88 סרטונים ב-2025.",
-      glowColors: "rgba(245, 158, 11, 0.45), rgba(239, 68, 68, 0.35)",
-      story: {
-        about: "כיצד ליצור תוכן עקבי ואיכותי ביוטיוב בלי להישחק. בסרטון זה אני משתף את המטרות של ערוץ the88creator ואת הכלים שעוזרים לי לנהל שני ערוצים במקביל.",
-        extra: "טיפים מעשיים ליוצרי תוכן מתחילים שרוצים לפרוץ ביוטיוב, להתגבר על מחסומי כתיבה ולערוך סרטונים במהירות.",
-        techImages: "מצלמות mirrorless וציוד סאונד מקצועי",
-        techMotion: "CapCut Pro לעריכה מהירה וממוקדת",
-        techOther: "כלי AI לאופטימיזציה של כותרות, תיאורים ותמונות ממוזערות (Thumbnails)"
-      }
-    },
-    {
-      id: "y83526-logo",
-      title: "איך להשתמש ב-Stable Diffusion ליצירת לוגו תלת-מימד",
-      channel: "the88creator",
-      channelName: "@the88creator",
-      category: "the88creator",
-      badge: "מדריך ✦ Stable Diffusion",
-      desc: "מדריך מעשי צעד-אחר-צעד ליצירת לוגו תלת-מימד מבריק (כמו לוגו היוצר הקיים בעמוד הנחיתה) בעזרת בינה מלאכותית.",
-      glowColors: "rgba(6, 182, 212, 0.45), rgba(99, 102, 241, 0.35)",
-      story: {
-        about: "במדריך זה נלמד איך לקחת סקיצה דו-מימדית פשוטה ולהפוך אותה לטקסטורה ומודל תלת-מימדי עשיר עם החזר אור באמצעות כללי פרומפטים מורכבים ב-SD.",
-        extra: "נציג שימוש בטכנולוגיות ControlNet Depth ו-Normal Maps ליצירת עומק וגימור זכוכית או מתכת מבריקה.",
-        techImages: "Stable Diffusion WebUI, ControlNet, Model-Viewer Integration",
-        techMotion: "Blender לעיבוד ה-GLB הסופי",
-        techOther: "CSS/JS להטמעת המודל בצורה רספונסיבית באתר האינטרנט"
-      }
     }
   ];
 
@@ -420,11 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!mainVideoPlayer) return;
     
     // Set iframe source (with enablejsapi=1 for controller control)
-    let embedUrl = `https://www.youtube.com/embed/${video.id}?enablejsapi=1&rel=0`;
-    // If it's a mock id (starts with y83526), use the flagship video for preview
-    if (video.id.startsWith('y83526')) {
-      embedUrl = `https://www.youtube.com/embed/sedd2J_a4Wg?enablejsapi=1&rel=0`;
-    }
+    const embedUrl = `https://www.youtube.com/embed/${video.id}?enablejsapi=1&rel=0&autoplay=1`;
     mainVideoPlayer.src = embedUrl;
     
     // Update basic meta
@@ -471,10 +399,7 @@ document.addEventListener('DOMContentLoaded', () => {
       card.className = 'video-card reveal visible';
       
       // Pull MQ YouTube thumbnails
-      let thumbUrl = `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`;
-      if (video.id.startsWith('y83526')) {
-        thumbUrl = `https://img.youtube.com/vi/sedd2J_a4Wg/mqdefault.jpg`;
-      }
+      const thumbUrl = `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`;
       
       card.innerHTML = `
         <div class="video-thumbnail-wrapper">
